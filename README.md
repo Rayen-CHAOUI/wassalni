@@ -6,7 +6,7 @@ Le travail réalisé contribue de manière significative au domaine du **transpo
 # Technologies utilisées : 
 - **Fronted:**
     - [Flutter & Dart](https://flutter.dev)
--**Backend:**    
+- **Backend:**    
     - [Node.js](https://nodejs.org)
     - [Express.js](https://expressjs.com)
     - [MongoDB](https://www.mongodb.com)
@@ -79,7 +79,6 @@ git clone https://github.com/Rayen-CHAOUI/wassalni.git
 
 ---
 
-## Auteur: 
-**CHAOUI Rayen.**
+## Auteur: **CHAOUI Rayen.**
 ---
 N'hésitez pas à contribuer, signaler des bugs ou proposer des améliorations !
