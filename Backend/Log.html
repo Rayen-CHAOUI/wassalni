@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Activity Logs</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Activity Logs</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Time of the Activity</th>
+        <th>TheActivity</th>
+      </tr>
+    </thead>
+    <tbody id="activityTableBody">
+    </tbody>
+  </table>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/userActivities');
+        const activities = await response.json();
+
+        const tableBody = document.getElementById('activityTableBody');
+        activities.forEach(activity => {
+          const row = document.createElement('tr');
+          const timestampCell = document.createElement('td');
+          const activityCell = document.createElement('td');
+
+          timestampCell.textContent = activity.timestamp;
+          activityCell.textContent = activity.activity;
+
+          row.appendChild(timestampCell);
+          row.appendChild(activityCell);
+
+          tableBody.appendChild(row);
+        });
+      } catch (error) {
+        console.error('Error fetching user activities:', error);
+      }
+    });
+  </script>
+</body>
+</html>

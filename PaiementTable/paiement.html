@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Paiements et Crédits</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tableau de Paiements et Crédits des Conducteurs</h1>
+    <input type="text" id="searchInput" placeholder="Rechercher par conducteur...">
+    <table id="paymentTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Conducteur</th>
+                <th>Voiture</th>
+                <th>Ancien Crédit (Da)</th>
+                <th>Débit (Da)</th>
+                <th>Versment (Da)</th>
+                <th>Nouveau Crédit (Da)</th>
+                <th>Dernier Délai de Paiement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les lignes du tableau seront ajoutées ici par JavaScript -->
+        </tbody>
+    </table>
+    
+    <div id="paymentDetails" class="hidden">
+        <button id="closeDetails">X</button>
+        <center><h1>Détails de Paiement</h1></center>
+        <h2><strong></strong> <span id="detailDriver"></span></h2>
+        <p><strong>Date :</strong> <span id="detailDate"></span></p>
+        <p><strong>Voiture :</strong> <span id="detailCar"></span></p>
+        <p><strong>Ancien Crédit (Da) :</strong> <span id="detailOldCredit"></span></p>
+        <p><strong>Débit (Da) :</strong> <span id="detailDebit"></span></p>
+        <p><strong>Versment (Da) :</strong> <span id="detailVersment"></span></p>
+        <p><strong>Nouveau Crédit (Da) :</strong> <span id="detailNewCredit"></span></p>
+        <p><strong>Dernier Délai de Paiement :</strong> <span id="detailPaymentDeadline"></span></p>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
